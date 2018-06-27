@@ -1,0 +1,166 @@
+*{margin:0px;padding:0px;list-style: none;}
+body{background-color: #30303A;color:#fff;margin-top:120px;}
+img{
+    display:block;
+    max-width: 100%;
+    height:auto;
+}
+audio{display:none}
+/*****header*****/
+.header{
+    width:100%;
+    height:70px;
+    text-align: center;
+    background:#000;
+    position:fixed;
+    top:0;left:0;
+    z-index:12;
+}
+.header:before{display:table;content:" ";}
+.search{
+    width:80%;
+    height:30px;
+    margin:20px auto;
+    background:#30303A;
+}
+.search input{float:left;border:0;width:85%;height:30px;padding-left:3%;outline: none}
+.header b{
+    float:left;
+    width:8%;
+    height:20px;
+    padding:5px;
+    background:url(../img/search.png) no-repeat center;
+    background-size:45%;
+}
+/******nav*******/
+.nav{width:100%;height:50px;position:fixed;
+    top:70px;left:0;z-index:10;background:#30303A}
+.nav ul{height:50px;line-height:50px;text-align: center;}
+.nav ul li{float:left;width:25%;}
+.n_color{color:#fff;text-decoration: none;display:block;width:80%;margin:0px auto;}
+.active{color:#7DE87D}
+.n_color.router-link-exact-active.router-link-active{color:#7DE87D;border-bottom:2px solid #7DE87D;height:48px;}
+/*******carousel*********/
+.banner{width:100%;height:150px;position: relative;}
+.banner ul{width:100%;overflow: hidden}
+.banner ul li{position:absolute}
+/*.fade-enter-active{transform: translateX(0);transition: all 1s linear}    *//*****轮播广告动画效果*****/
+/*.fade-enter{transform: translateX(100%);}*/
+/*.fade-leave-active{transform: translateX(-100%);transition: all 1s linear}*/
+/*.fade-leave{transform: translateX(0);}*/
+.bullet{
+    position:absolute;
+    /*width:35%;*/
+    bottom:15px;
+    right:30%;
+    z-index: 10;
+}
+.bullet span{width:10px;height:10px;border:1px solid #333;display:inline-block;border-radius: 50%;margin-right:10px;}
+.mark{
+    background:#30303A;
+}
+/*****musicList******/
+.musicList{width:100%;}
+.musicList li{width:90%;height:50px;line-height:50px;border-bottom:1px solid #666;margin:0 auto;background:url(../img/list_icon.png) no-repeat right;background-size: 10%;}
+.musicList li>span{width:90%;display:inline-block;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.musicList li.current{color:#7DE87D;background:url(../img/list_icon2.png) no-repeat right;background-size: 10%;}
+/*******my-play**********/
+.top_bottom{width:40px;margin-bottom:5px;position:fixed;bottom:65px;left:0px;margin-left:10px;transition:all 0.5s linear;}
+.top_bottom_cang{bottom:5px;transform:rotate(180deg);}
+.play_info{width:100%;height:60px;background:#000;opacity:0.8;position:fixed;bottom:0px;left:0px;transition:all 0.5s linear;}
+.play_info_cang{bottom:-60px;}
+.song_info{float:left;width:68%;height:60px;}
+.song_play{float:left;width:32%;height:60px;}
+.song_info dl dt{float:left;width:50px;height:50px;margin:5px 10px;}
+.song_info dl dd{float:left;margin-top:5px;color:#fff;}
+.song_play .play{float:left;width:30px;height:30px;margin:15px 10px;background:url("../img/play.png") no-repeat center;background-size:cover;}
+.play.pause{background-image:url('../img/pause.png')}
+.song_play .next{float:left;width:30px;height:30px;margin:15px 10px;background:url("../img/next.png") no-repeat center;background-size:cover;}
+/*****bigPlay******/
+.bigPlay{position:fixed;top:70px;left:0px;right:0px;bottom:0px;z-index:11;background-color:#30303A;display:none;}
+.bigP_shadow{width:100%;height:100%;background:rgba(0,0,0,.6);position:absolute;z-index:11;}
+.bigPTit{width:100%;height:50px;background:rgba(0,0,0,.8);text-align: center;line-height:50px;position:absolute;top:0px;left:0px;z-index:12;}
+.bigPTit b{position:absolute;left:3px;width:30px;height:30px;background:url("../img/goback_1.png") no-repeat center;background-size:50%;margin:10px 10px;}
+.bigP_bg{position:absolute;top:0px;left:0px;right:0px;bottom:0px;filter:blur(10px);z-index:10;background-size:cover;background:url(../img/logo_kugou.png) no-repeat center;}
+.bigP_box{width:40vh;height:40vh;margin:60px auto 10px;overflow: hidden;border-radius: 50%;box-shadow: 0 0 8px rgba(0,0,0,.2);position:relative;background:url('../img/disc-ip6.png');background-size:100%;animation: zhuan 20s linear infinite;}
+@keyframes zhuan{
+    0%{transform: rotate(0deg)}
+    100%{transform: rotate(360deg)}
+}
+.playActive{animation-play-state: paused}
+.bigP_box>img{width:66%;position:absolute;left:50%;top:50%;margin-top:-33%;margin-left:-33%;box-sizing: border-box;border:2px solid rgba(0,0,0,.5);border-radius: 50%;}
+.hand{width:30%;height:30%;background: url('../img/needle-ip6.png') no-repeat;background-size:95%;position:absolute;top:-20px;right:18%;z-index:11;transform:rotate(8deg);transform-origin: 5% 0;transition: all 0.3s linear;}
+.handA{transform:rotate(-7deg);}
+.songCi{
+    width:100%;
+    height:75px;
+    text-align: center;
+    overflow: hidden;
+    position:relative;
+}
+.ci{width:100%;position:absolute;top:0px;left:0px;}
+.songCi p{
+    width:80%;
+    height:21px;
+    margin:3px auto;
+    overflow: hidden;
+}
+.ciColor{color:#7DE87D}
+.big_rang{width:95%;height:40px;line-height:40px;margin:0px auto;text-align: center;
+    /*padding-top:10%;*/
+}
+.big_rang>b{font-size:14px;font-weight:normal;padding:8px 5px;}
+.big_rang>input{
+    -webkit-appearance: none;
+    width:70%;
+    height:3px;
+    transform: translateY(-3px);
+    background: -webkit-linear-gradient(#61bd12, #61bd12) no-repeat, #ddd;/*设置左边颜色为#61bd12，右边颜色为#ddd*/
+    background-size: 10% 100%;/*设置左右宽度比例*/
+}
+input[type=range]:focus {   /**原始的控件获取到焦点时，会显示包裹整个控件的边框，所以还需要把边框取消。***/
+    outline: none;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;/*清除系统默认样式*/
+    height: 15px;/*拖动块高度*/
+    width: 15px;/*拖动块宽度*/
+    background: #fff;/*拖动块背景*/
+    border-radius: 50%; /*外观设置为圆形*/
+    border: solid 1px #ddd; /*设置边框*/
+}
+/*.big_rang>input::-webkit-slider-thumb{-webkit-appearance: none;width:10px;height:10px;border-radius:50%;background: #fff;}*/
+.play_big{width:80%;padding:0% 10% 0;height:100px;display:flex;justify-content:space-around;align-items: center}
+.big_pre{width:30px;height:30px;border:1px solid #fff;border-radius:50%;background:url(../img/next.png) no-repeat center;transform: rotate(180deg);background-size:50%;padding:10px;}
+.big_play{width:40px;height:40px;border:1px solid #fff;border-radius:50%;background:url(../img/play.png) no-repeat center;background-size:60%;padding:10px;}
+.big_play.pause{background-image:url('../img/pause.png')}
+.big_next{width:30px;height:30px;border:1px solid #fff;border-radius:50%;background:url(../img/next.png) no-repeat center;background-size:50%;padding:10px;}
+/*********rank***********/
+.r_panel{width:100%;height:100px;line-height:100px;background:url('../img/arrow_icon.png') no-repeat 90%;background-size:3%;border-bottom:1px solid #333}
+.r_panel_left{float:left;width:80px;height:80px;margin:10px 20px;}
+.r_panel_right{float:left;margin-left:20px;}
+/**********plist**************/
+.p_panel{width:100%;height:100px;background:url('../img/arrow_icon.png') no-repeat 90%;background-size:3%;border-bottom:1px solid #333}
+.p_panel_left{float:left;width:80px;height:80px;margin:10px 20px;}
+.p_panel_right{float:left;overflow: hidden;width:200px;padding-top:20px;}
+.p_panel_right>p{font-size:12px;padding-top:10px;}
+.p_panel_right>p b{display:inline-block;width:15px;height:15px;background:url("../img/icon_music.png") no-repeat center;background-size: cover;margin-right:5px;}
+/*************singer****************/
+.singer{width:100%;}
+.singer:before{display:table;content: ' '}
+.singer ul{width:90%;border:1px solid #333;border-radius:5px;margin:15px auto 0px;box-shadow:inset 0 0px 12px #ccc;}
+.singer ul li{padding:10px 20px;font-size:14px;color:#ccc;background:url("../img/arrow_icon.png") no-repeat 95%;background-size: 3%;border-bottom:1px solid #555;}
+.singer ul li:last-child{border:none}
+/******rankpage*********/
+.rankPage{width:100%;margin-top:-50px;}
+.rankPageTit{width:100%;height:50px;background:rgba(0,0,0,.8);position:fixed;top:70px;left:0;z-index: 10;text-align: center;line-height:50px;}
+.rankPageTit b{position:absolute;left:3px;width:30px;height:30px;background:url("../img/goback_1.png") no-repeat center;background-size:50%;margin:10px 10px;}
+.rankPageHead{position:relative}
+/*********pListPage************/
+.p_msg{position:absolute;bottom:0;left:0;width:90%;line-height:18px;font-size:12px;padding:10px 5%;background:rgba(0,0,0,.8)}
+/**********singerList**************/
+.singerList{margin-top:-50px;}
+.pageTit{width:100%;height:50px;background:rgba(0,0,0,.8);text-align: center;line-height:50px;}
+.pageTit b{position:absolute;left:3px;width:30px;height:30px;background:url("../img/goback_1.png") no-repeat center;background-size:50%;margin:10px 10px;}
+/**********searchList*********/
+.s_total{width:90%;height:35px;line-height:35px;padding:0px 5%;background:rgba(0,0,0,0.8)}
